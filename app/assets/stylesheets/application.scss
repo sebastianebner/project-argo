@@ -1,0 +1,116 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap/theme';
+
+.logo-header {
+
+	max-width: 130px;
+	padding: 1px;
+
+}
+
+.facebook-pic {
+
+	margin-top: 8px;
+	margin-left: 10px;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.facebook-log {
+
+	margin-top: 6px;
+	margin-left: 10px;
+	width: 140px;
+}
+
+// Coverr Video
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+.title-container {
+		position: absolute;
+    top: 15%;
+    margin-top: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 99;
+    color: white;
+    font-size: 72px;
+    font-family: Georgia, serif;
+  }
+
+.video-logo {
+	max-width: 550px;
+	margin-top: -50px;
+	margin-left: 100px;
+
+}
+
+.video-subtitle {
+	margin-top: -40px;
+}
+
+// Coverr Video End
+
+
+
