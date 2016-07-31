@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :users
   resources :students
   resources :grades
+  resources :subjects
 
 end
