@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :students
   resources :grades
   resources :subjects
+  resources :brackets
 
 end
