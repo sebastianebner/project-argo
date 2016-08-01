@@ -15,11 +15,19 @@ ActiveRecord::Schema.define(version: 20160727102323) do
   create_table "brackets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
-    t.index ["user_id"], name: "index_brackets_on_user_id"
+    t.integer  "subject_id"
+    t.index ["subject_id"], name: "index_brackets_on_subject_id"
   end
 
   create_table "grades", force: :cascade do |t|
+    t.integer  "finance"
+    t.integer  "economics"
+    t.integer  "strategy"
+    t.integer  "innovation"
+    t.integer  "orga"
+    t.integer  "imt"
+    t.integer  "personal"
+    t.integer  "life"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "subject_id"
@@ -30,16 +38,16 @@ ActiveRecord::Schema.define(version: 20160727102323) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.integer  "bracket_id"
+    t.index ["bracket_id"], name: "index_students_on_bracket_id"
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "subjects", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
     t.integer  "bracket_id"
     t.index ["bracket_id"], name: "index_subjects_on_bracket_id"
-    t.index ["user_id"], name: "index_subjects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

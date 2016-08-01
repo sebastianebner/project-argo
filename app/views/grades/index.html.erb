@@ -1,5 +1,64 @@
-<% if current_user %>
 
-<% else %>
-  <%= render 'pages/_welcome.html.erb' %> 
-<% end %>
+<div class="grades-container">
+
+	<div class="page-header">
+		<h1> Welcome <%=current_user.name %>, please enter your grades here.</h1>
+	</div>
+
+	<div class="form-shrinker">
+		<form>
+			<div class="row">
+				<div class="col-md-6">
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> Finance</span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> Economics</span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> Business Strategy</span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> Innovation Management</span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+
+				</div>
+				<div class="col-md-6">
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> Orga</span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> IMT</span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> Personal Skills </span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+
+							<div class="input-group">
+					  		<span class="input-group-addon" id="basic-addon1"> School of Life </span>
+					  			<input type="text" class="form-control" placeholder="Enter grade here" aria-describedby="basic-addon1">
+							</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+<%= link_to(grades_path) do %>
+	<div class="submit-button">
+			<button type="button" class="btn btn-info">Submit</button>
+	</div>
+	<% end %>
+
+</div>
