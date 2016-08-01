@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   resources :grades
   resources :subjects
   resources :brackets
-  
+
 
 end
