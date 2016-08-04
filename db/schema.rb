@@ -10,24 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727102323) do
+ActiveRecord::Schema.define(version: 20160802174331) do
 
   create_table "brackets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "subject_id"
-    t.index ["subject_id"], name: "index_brackets_on_subject_id"
+    t.integer  "year"
   end
 
   create_table "grades", force: :cascade do |t|
-    t.integer  "finance"
-    t.integer  "economics"
-    t.integer  "strategy"
-    t.integer  "innovation"
-    t.integer  "orga"
-    t.integer  "imt"
-    t.integer  "personal"
-    t.integer  "life"
+    t.integer  "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "subject_id"
@@ -37,6 +29,8 @@ ActiveRecord::Schema.define(version: 20160727102323) do
   create_table "students", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
+    t.integer  "grade"
     t.integer  "user_id"
     t.integer  "bracket_id"
     t.index ["bracket_id"], name: "index_students_on_bracket_id"
@@ -44,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160727102323) do
   end
 
   create_table "subjects", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "bracket_id"
