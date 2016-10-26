@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'pages#index'
 
 	get '/auth/:provider/callback', to: 'sessions#create'
-	get '/grades/grades_completed', to: 'grades#completed'
+	
 	get '/grades/index', to: 'grades#index'
 
   delete '/logout', to: 'sessions#destroy'

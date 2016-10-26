@@ -4,7 +4,7 @@
 	<div class="page-header">
 		<h1> Welcome <%=current_user.name %>, please enter your grades here.</h1>
 	</div>
-	<form action="<%= grades_path %>" method="POST">
+	<form action="/grades" method="POST">
 		<div class="form-shrinker">
 			<div class="row">
 
@@ -22,9 +22,10 @@
 			</div>
 		</div>
 
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">	
+
 		<div class="submit-button">
-			<a href="grades/grades_completed"
-			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">	
+			
 			<input type="submit" class="btn btn-info">Submit</a></a>
 				
 		</div>
